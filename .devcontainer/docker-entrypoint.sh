@@ -47,6 +47,7 @@ fi
 touch /tmp/rex_launch.log
 chown rex:1000 /tmp/rex_launch.log
 chmod 664 /tmp/rex_launch.log
+chmod 666 /dev/ttyACM0
 
 if [[ ${ROS_ENABLE_AUTOSTART} == "1" ]]; then
     echo "Rex autostart enabled - starting REX ROS2 ..."

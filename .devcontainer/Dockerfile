@@ -70,5 +70,6 @@ USER root
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 RUN sudo usermod -a -G dialout $USERNAME
+RUN sudo usermod -a -G tty $USERNAME
 
 CMD [ "/usr/local/bin/docker-entrypoint.sh" ]
